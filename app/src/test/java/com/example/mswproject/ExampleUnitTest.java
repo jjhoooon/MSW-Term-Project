@@ -1,4 +1,4 @@
-package com.dongguk.mswtermproject;
+package com.example.mswproject;
 
 import org.junit.Test;
 
