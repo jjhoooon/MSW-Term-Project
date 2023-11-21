@@ -10,47 +10,79 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+    private static ArrayList<MealData> localDataSet;
 
-    private ArrayList<String> localDataSet;
+
+    //클릭 이벤트
+    public interface OnItemClickListener {
+        void onItemClicked(int position, int data);
+    }
+
+    // OnItemClickListener 참조 변수 선언
+    private OnItemClickListener itemClickListener;
+
+    // OnItemClickListener 전달 메소드
+    public void setOnItemClickListener (OnItemClickListener listener) {
+        itemClickListener = listener;
+    }
 
     //===== 뷰홀더 클래스 =====================================================
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
+        private TextView textViewRestaurant;
+        private TextView textViewDate;
+        private TextView textViewDish;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textView);
+            textViewRestaurant = itemView.findViewById(R.id.textViewRestaurant);
+            textViewDate = itemView.findViewById(R.id.textViewDate);
+            textViewDish = itemView.findViewById(R.id.textViewDish);
         }
-        public TextView getTextView() {
-            return textView;
+
+        public int getIndex(int position){
+            return localDataSet.get(position).index;
         }
     }
-    //========================================================================
 
-    //----- 생성자 --------------------------------------
+    //-생성자
     // 생성자를 통해서 데이터를 전달받도록 함
-    public CustomAdapter (ArrayList<String> dataSet) {
+    public CustomAdapter(ArrayList<MealData> dataSet) {
         localDataSet = dataSet;
     }
-    //--------------------------------------------------
 
     @NonNull
-    @Override   // ViewHolder 객체를 생성하여 리턴한다.
+    @Override   // ViewHolder 객체를 생성하여 리턴
     public CustomAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.meal_list_item, parent, false);
+
         CustomAdapter.ViewHolder viewHolder = new CustomAdapter.ViewHolder(view);
+
+        view.setOnClickListener(new View.OnClickListener(){
+            //@override
+            public void onClick(View view){
+                int idx = -1;
+                int position = viewHolder.getAdapterPosition();
+                if(position != RecyclerView.NO_POSITION){
+                    idx = viewHolder.getIndex(position);
+                }
+                itemClickListener.onItemClicked(position, idx);
+            }
+        });
 
         return viewHolder;
     }
 
-    @Override   // ViewHolder안의 내용을 position에 해당되는 데이터로 교체한다.
+    @Override   // ViewHolder안의 내용을 position에 해당되는 데이터로 교체
     public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
-        String text = localDataSet.get(position);
-        holder.textView.setText(text);
+        MealData ld = localDataSet.get(position);
+        holder.textViewRestaurant.setText(ld.location);
+        holder.textViewDate.setText(ld.startDate + " ~ " + ld.endDate);
+        holder.textViewDish.setText(ld.name);
     }
 
-    @Override   // 전체 데이터의 갯수를 리턴한다.
+    @Override
     public int getItemCount() {
         return localDataSet.size();
     }
