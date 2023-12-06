@@ -2,16 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/my_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/my_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mswproject"
         tools:targetApi="31">
+        <activity
+            android:name=".SummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealInputActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,13 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".Calendar">
-        </activity>
-        <activity
-            android:name=".MealList">
-        </activity>
+        <activity android:name=".CustomCalendar" />
+        <activity android:name=".MealList" />
+        <activity android:name=".Analyzation" />
     </application>
 
 </manifest>

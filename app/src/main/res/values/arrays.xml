@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="options_array">
+        <item>메인</item>
+        <item>사이드</item>
+    </array>
+
+    <array name="categories_array">
+        <item>아침</item>
+        <item>점심</item>
+        <item>저녁</item>
+        <item>음료</item>
+    </array>
+
+    <array name="places_array">
+        <item>상록원 1층</item>
+        <item>상록원 2층</item>
+        <item>상록원 3층</item>
+        <item>기숙사 식당</item>
+        <item>가든쿡 식당</item>
+        <item>두리터 카페</item>
+        <item>그루터기 카페</item>
+        <item>가온누리 카페</item>
+        <item>블루포트</item>
+    </array>
+</resources>

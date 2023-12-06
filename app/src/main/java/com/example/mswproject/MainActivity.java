@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         showCalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Calendar.class);
+                Intent intent = new Intent(getApplicationContext(), CustomCalendar.class);
                 startActivity(intent);
             }
         });
@@ -34,5 +34,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button AnalyzeBtn = (Button) findViewById(R.id.analyzeBtn);
+
+        AnalyzeBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), Analyzation.class);
+                startActivity(intent);
+            }
+        });
+
+        Button inputBtn = (Button) findViewById(R.id.inputBtn);
+
+        inputBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), MealInputActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

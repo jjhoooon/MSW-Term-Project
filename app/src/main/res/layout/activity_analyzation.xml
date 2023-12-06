@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="anylyze recent 30days"
+        android:text="최근 30일 식사 분석"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#9E28B3"
         android:textSize="20sp"
