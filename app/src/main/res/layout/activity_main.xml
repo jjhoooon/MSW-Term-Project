@@ -4,8 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/inputBtn"
@@ -19,6 +35,30 @@
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
+        android:id="@+id/show_cal_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/analyzeBtn"
+        app:layout_constraintEnd_toEndOf="@+id/analyzeBtn"
+        app:layout_constraintStart_toStartOf="@+id/analyzeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/listBtn"
+        app:srcCompat="@drawable/show_button"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/analyzeBtn"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_cal_btn"
+        app:srcCompat="@drawable/analyze_button"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
         android:id="@+id/listBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -29,52 +69,15 @@
         app:srcCompat="@drawable/list_button"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/analyzeBtn"
-        android:layout_width="200dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="54dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_cal_btn"
-        app:srcCompat="@drawable/analyze_button"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/show_cal_btn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/analyzeBtn"
-        app:layout_constraintEnd_toEndOf="@+id/analyzeBtn"
-        app:layout_constraintStart_toStartOf="@+id/analyzeBtn"
-        app:layout_constraintTop_toBottomOf="@+id/listBtn"
-        app:srcCompat="@drawable/show_button"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
         android:text="동국대학교 학식 관리 시스템"
-        android:textSize="20sp"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/inputBtn"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
