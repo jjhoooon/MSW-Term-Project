@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,171 +7,212 @@
     tools:context=".MealInputActivity">
 
     <!-- Add EditText fields for other columns -->
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="식사 입력하기"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#9E28B3"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
 
 
-    <ImageButton
-        android:id="@+id/buttonPickPhoto"
-        android:layout_width="180dp"
-        android:layout_height="32dp"
-        android:onClick="pickPhoto"
-        android:src="@drawable/photo_select_button"
-        android:text="사진 선택"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="205dp"
-        tools:layout_editor_absoluteY="192dp" />
-
-    <ImageView
-        android:id="@+id/imageViewPhoto"
-        android:layout_width="180dp"
-        android:layout_height="178dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/empty"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="46dp" />
-
-    <EditText
-        android:id="@+id/editTextDish"
-        android:layout_width="283dp"
-        android:layout_height="wrap_content"
-        android:hint="음식 이름을 입력해 주세요."
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="262dp" />
-
-    <EditText
-        android:id="@+id/editTextSide1"
-        android:layout_width="121dp"
-        android:layout_height="40dp"
-        android:enabled="false"
-        android:hint="반찬1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="323dp" />
-
-    <EditText
-        android:id="@+id/editTextSide2"
-        android:layout_width="121dp"
-        android:layout_height="40dp"
-        android:enabled="false"
-        android:hint="반찬2"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="323dp" />
-
-    <EditText
-        android:id="@+id/editTextSide3"
-        android:layout_width="121dp"
-        android:layout_height="40dp"
-        android:enabled="false"
-        android:hint="반찬3"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="323dp" />
-
-    <Spinner
-        android:id="@+id/spinnerCategory"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:orientation="vertical"
+        android:paddingStart="15sp"
+        android:paddingEnd="15sp">
 
-    <EditText
-        android:id="@+id/editTextReview"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:hint="음식에 대한 평을 입력해 주세요."
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="587dp" />
 
-    <Spinner
-        android:id="@+id/spinnerPlace"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="388dp" />
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="식사 입력하기"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#9E28B3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
 
-    <EditText
-        android:id="@+id/editTextCost"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:hint="음식의 가격을 입력해 주세요."
-        android:inputType="numberDecimal"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="420dp" />
+        <EditText
+            android:id="@+id/editTextDish"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:hint="음식 이름을 입력해 주세요."
+            android:layout_marginStart="10sp"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextStartTime"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:focusable="false"
-        android:hint="식사 시작 시간을 입력해 주세요."
-        android:inputType="none"
-        android:onClick="pickStartTime"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="475dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5sp">
 
-    <EditText
-        android:id="@+id/editTextEndTime"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:focusable="false"
-        android:hint="식사 종료 시간을 입력해 주세요."
-        android:inputType="none"
-        android:onClick="pickEndTime"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="531dp" />
 
-    <Button
-        android:id="@+id/buttonSave"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:onClick="saveMeal"
-        android:text="저장"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="675dp" />
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="10sp"
+                android:paddingEnd="10sp"
+                android:textAlignment="center">
 
-    <ImageButton
-        android:id="@+id/button2"
-        android:layout_width="180dp"
-        android:layout_height="31dp"
-        android:onClick="addSide"
-        android:src="@drawable/add_dish_button"
-        android:text="반찬 추가"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="205dp"
-        tools:layout_editor_absoluteY="150dp" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        app:constraint_referenced_ids="imageViewPhoto" />
+                <EditText
+                    android:id="@+id/editTextSide1"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20sp"
+                    android:enabled="false"
+                    android:hint="반찬1"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="323dp" />
+
+                <EditText
+                    android:id="@+id/editTextSide2"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5sp"
+                    android:enabled="false"
+                    android:hint="반찬2"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/editTextSide3"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5sp"
+                    android:enabled="false"
+                    android:hint="반찬3"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="282dp"
+                    tools:layout_editor_absoluteY="323dp" />
+
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="180dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="29sp"
+                    android:onClick="addSide"
+                    android:src="@drawable/add_dish_button"
+                    android:text="반찬 추가"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="205dp"
+                    tools:layout_editor_absoluteY="150dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imageViewPhoto"
+                    android:layout_width="180dp"
+                    android:layout_height="178dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/empty"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="46dp" />
+
+                <ImageButton
+                    android:id="@+id/buttonPickPhoto"
+                    android:layout_width="180dp"
+                    android:layout_height="32dp"
+                    android:onClick="pickPhoto"
+                    android:src="@drawable/photo_select_button"
+                    android:text="사진 선택"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="205dp"
+                    tools:layout_editor_absoluteY="192dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <EditText
+            android:id="@+id/editTextReview"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:hint="음식에 대한 평을 입력해 주세요."
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="587dp" />
+
+        <Spinner
+            android:id="@+id/spinnerPlace"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="388dp" />
+
+        <EditText
+            android:id="@+id/editTextCost"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:hint="음식의 가격을 입력해 주세요."
+            android:inputType="numberDecimal"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="420dp" />
+
+        <EditText
+            android:id="@+id/editTextStartTime"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="식사 시작 시간을 입력해 주세요."
+            android:inputType="none"
+            android:onClick="pickStartTime"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="475dp" />
+
+        <EditText
+            android:id="@+id/editTextEndTime"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="식사 종료 시간을 입력해 주세요."
+            android:inputType="none"
+            android:onClick="pickEndTime"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="531dp" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:onClick="saveMeal"
+            android:text="저장"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="675dp" />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="imageViewPhoto" />
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -180,4 +221,4 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
