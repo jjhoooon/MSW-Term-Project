@@ -24,26 +24,40 @@
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/inputBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/listBtn"
-        app:layout_constraintEnd_toEndOf="@+id/listBtn"
-        app:layout_constraintStart_toStartOf="@+id/listBtn"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/input_button"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-    <ImageButton
         android:id="@+id/show_cal_btn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/analyzeBtn"
         app:layout_constraintEnd_toEndOf="@+id/analyzeBtn"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/analyzeBtn"
         app:layout_constraintTop_toBottomOf="@+id/listBtn"
         app:srcCompat="@drawable/show_button"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/inputBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/listBtn"
+        app:layout_constraintEnd_toEndOf="@+id/listBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/listBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/input_button"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/listBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/show_cal_btn"
+        app:layout_constraintEnd_toEndOf="@+id/show_cal_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/show_cal_btn"
+        app:layout_constraintTop_toBottomOf="@+id/inputBtn"
+        app:srcCompat="@drawable/list_button"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -53,20 +67,10 @@
         android:layout_marginBottom="101dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/show_cal_btn"
         app:srcCompat="@drawable/analyze_button"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/listBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/show_cal_btn"
-        app:layout_constraintEnd_toEndOf="@+id/show_cal_btn"
-        app:layout_constraintStart_toStartOf="@+id/show_cal_btn"
-        app:layout_constraintTop_toBottomOf="@+id/inputBtn"
-        app:srcCompat="@drawable/list_button"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <TextView
