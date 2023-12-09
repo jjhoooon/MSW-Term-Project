@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="705dp"
+        android:layout_height="715dp"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
@@ -35,7 +35,7 @@
             android:id="@+id/imageViewPhoto2"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="45dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/empty"
@@ -45,11 +45,11 @@
             tools:ignore="MissingConstraints" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
 
-            android:layout_marginTop="5dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView4"
@@ -59,6 +59,7 @@
                 android:layout_marginTop="8dp"
                 android:text="종류"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewPhoto2" />
 
@@ -66,7 +67,7 @@
                 android:id="@+id/textViewCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="8dp"
                 android:text="TextView"
                 android:textSize="16sp"
@@ -75,7 +76,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -87,6 +88,7 @@
                 android:layout_marginTop="20dp"
                 android:text="음식명"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -104,7 +106,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -116,6 +118,7 @@
                 android:layout_marginTop="20dp"
                 android:text="반찬"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -123,7 +126,7 @@
                 android:id="@+id/textViewSide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
                 android:textSize="16sp"
@@ -132,7 +135,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -144,6 +147,7 @@
                 android:layout_marginTop="20dp"
                 android:text="장소"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -151,7 +155,7 @@
                 android:id="@+id/textViewPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
                 android:textSize="16sp"
@@ -161,7 +165,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -173,6 +177,7 @@
                 android:layout_marginTop="20dp"
                 android:text="시간"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -180,17 +185,17 @@
                 android:id="@+id/textViewTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -202,6 +207,7 @@
                 android:layout_marginTop="20dp"
                 android:text="가격"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -209,7 +215,7 @@
                 android:id="@+id/textViewCost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
                 android:textSize="16sp"
@@ -219,7 +225,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -231,6 +237,7 @@
                 android:layout_marginTop="20dp"
                 android:text="칼로리"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
@@ -248,7 +255,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -260,6 +267,7 @@
                 android:layout_marginTop="20dp"
                 android:text="후기"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
@@ -267,7 +275,7 @@
                 android:id="@+id/textViewReview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:text="TextView"
                 android:textSize="16sp"
@@ -277,15 +285,17 @@
 
         </LinearLayout>
 
-        <Button
+
+        <ImageButton
             android:id="@+id/button"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="355dp"
+            android:layout_height="65dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:onClick="delItem"
-            android:text="삭제"
+            android:src="@drawable/delete_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
