@@ -1,150 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_analyze">
 
-    <TextView
-        android:id="@+id/textViewTitle2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="최근 30일 식사 분석"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <TextView
-        android:id="@+id/textViewTitleCal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="68dp"
-        android:text="총합 칼로리"
-        android:textColor="@color/title"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTitleBreakfast"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleBreakfast" />
+        android:layout_width="match_parent"
+        android:layout_height="715dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewTotalCal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="31dp"
-        android:text="0 kcal"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTitleCal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitleCal" />
+        <TextView
+            android:id="@+id/textViewTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="최근 30일 식사 분석"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="140dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewTitleCal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총합 칼로리"
+                android:textColor="@color/title"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewTotalCal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0 kcal"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text=" kcal"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewTitleBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총 조식 비용"
+                android:textColor="@color/title"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewTotalBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0 WON"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" WON"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewTitleLunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="총 점식 비용"
+                android:textColor="@color/title"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewTotalLunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0 WON"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" WON"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewTitleBeverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="총 음료 비용"
+                android:textColor="@color/title"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewTotalBeverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0 WON"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" WON"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewTitleDinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총 석식 비용"
+                android:textColor="@color/title"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewTotalDinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="0 WON"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" WON"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewTitleBreakfast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
-        android:text="총 조식 비용"
-        android:textColor="@color/title"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewTotalBreakfast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="9dp"
-        android:text="0 WON"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleBreakfast"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitleBreakfast" />
-
-    <TextView
-        android:id="@+id/textViewTitleLunch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="총 점식 비용"
-        android:textColor="@color/title"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleBreakfast"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTotalBreakfast" />
-    <TextView
-        android:id="@+id/textViewTotalLunch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="9dp"
-        android:text="0 WON"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleLunch"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitleLunch" />
-
-    <TextView
-        android:id="@+id/textViewTotalBeverage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="62dp"
-        android:text="0 WON"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleBeverage"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTotalDinner" />
-
-    <TextView
-        android:id="@+id/textViewTitleBeverage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="총 음료 비용"
-        android:textColor="@color/title"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewTotalBeverage"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleDinner" />
-
-    <TextView
-        android:id="@+id/textViewTotalDinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:text="0 WON"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleDinner"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitleDinner" />
-
-
-    <TextView
-        android:id="@+id/textViewTitleDinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="총 석식 비용"
-        android:textColor="@color/title"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitleLunch"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTotalLunch" />
-
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
