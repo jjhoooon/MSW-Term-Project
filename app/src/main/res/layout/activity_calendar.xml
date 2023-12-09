@@ -7,30 +7,15 @@
     android:id="@+id/TextView3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_calendar"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textViewDayCalContent"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="음료 메뉴"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toEndOf="@+id/textViewDayCal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeverage" />
 
     <TextView
         android:id="@+id/textViewDayCal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
         android:gravity="center"
         android:text="총열량"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -38,24 +23,42 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewDayCalContent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDayCalContent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeverage"
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textViewDayCalContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="35dp"
+        android:gravity="center"
+        android:text="음료 메뉴"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewDayCal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBeverageContent" />
+
+    <TextView
         android:id="@+id/textViewTitle"
-        android:layout_width="395dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="월간 식사"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#9E28B3"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/calendarView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -64,23 +67,23 @@
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/diaryTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <TextView
         android:id="@+id/diaryTextView"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="219dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="달력에서 날짜를 선택하세요."
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="15sp"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBreakfastContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
@@ -90,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginEnd="19dp"
         android:gravity="center"
         android:text="아침"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -98,8 +101,9 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewBreakfastContent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewBreakfastContent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/diaryTextView"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -107,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginEnd="18dp"
         android:gravity="center"
         android:text="점심"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -115,8 +119,9 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewLunchContent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewLunchContent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBreakfast"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -124,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginEnd="19dp"
         android:gravity="center"
         android:text="저녁"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -132,16 +137,77 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewDinnerContent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDinnerContent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLunch"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewBreakfastContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="아침 메뉴"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLunchContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBreakfast"
+        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+    <TextView
+        android:id="@+id/textViewLunchContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="점심 메뉴"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDinnerContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewLunch"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBreakfastContent" />
+
+    <TextView
+        android:id="@+id/textViewDinnerContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="22dp"
+        android:gravity="center"
+        android:text="저녁 메뉴"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBeverageContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewDinner"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLunchContent" />
+
+    <TextView
+        android:id="@+id/textViewBeverageContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="26dp"
+        android:gravity="center"
+        android:text="음료 메뉴"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDayCalContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewBeverage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDinnerContent" />
 
     <TextView
         android:id="@+id/textViewBeverage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="19dp"
         android:gravity="center"
         android:text="음료"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -149,68 +215,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewBeverageContent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewBeverageContent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDinner"
         tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewBreakfastContent"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="아침 메뉴"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewDayCal"
-        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
-
-    <TextView
-        android:id="@+id/textViewLunchContent"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="점심 메뉴"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textViewDayCalContent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBreakfast" />
-
-    <TextView
-        android:id="@+id/textViewDinnerContent"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="저녁 메뉴"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewDayCal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLunch" />
-
-    <TextView
-        android:id="@+id/textViewBeverageContent"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="음료 메뉴"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewDayCal"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDinner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
