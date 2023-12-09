@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button showCalButton = (Button) findViewById(R.id.show_cal_btn);
+        ImageButton showCalButton = (ImageButton) findViewById(R.id.show_cal_btn);
 
         showCalButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button listBtn = (Button) findViewById(R.id.listBtn);
+        ImageButton listBtn = (ImageButton) findViewById(R.id.listBtn);
 
         listBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button AnalyzeBtn = (Button) findViewById(R.id.analyzeBtn);
+        ImageButton AnalyzeBtn = (ImageButton) findViewById(R.id.analyzeBtn);
 
         AnalyzeBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button inputBtn = (Button) findViewById(R.id.inputBtn);
+        ImageButton inputBtn = (ImageButton) findViewById(R.id.inputBtn);
 
         inputBtn.setOnClickListener(new View.OnClickListener(){
             @Override
