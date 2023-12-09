@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_analyze">
 
     <TextView
         android:id="@+id/textViewTitle2"
@@ -15,7 +16,7 @@
         android:gravity="center"
         android:text="최근 30일 식사 분석"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#9E28B3"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="visible"
